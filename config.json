@@ -9,6 +9,7 @@
 		"preventScreensaver": true
 	},
 	"maxImageSize": "1500",
+	"imageQuality": 80,
 	"firstPhotoCountdownLength": "5",
 	"followingPhotosCountdownLength": "3",
 	"photoPreviewDuration": "8",

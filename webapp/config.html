@@ -64,6 +64,17 @@
 			  </div>
 
 			  <div class="row">
+			    <div class="cell">Image quality</div>
+			    <div class="cell">
+			    	<form action="#">
+						<p class="range-field">
+							<input type="range" min="0" max="100" step="1" id="imageQuality"/>
+						</p>
+					</form>
+			    </div>
+			  </div>
+
+			  <div class="row">
 			    <div class="cell">Keep images on Camera</div>
 			    <div class="cell">
 				    <div class="switch">
@@ -275,6 +286,8 @@
 	  			console.log(config)
 
 				$('#maxImageSize').val(config.maxImageSize);
+				$('#imageQuality').val(config.imageQuality);
+
 				$('#keep').prop('checked', config.gphoto2.keep);
 
 				$('#photoSeriesLength').val(config.photoSeriesLength);

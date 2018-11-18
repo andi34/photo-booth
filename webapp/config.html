@@ -233,6 +233,18 @@
 			</div>
 
 			<div class="row">
+				<div class="cell">Use infrared Remote Control</div>
+				<div class="cell">
+				    <div class="switch">
+						<label>
+							<input type="checkbox" id="useRemoteTrigger">
+							<span class="lever"></span>
+						</label>
+					</div>
+				</div>
+			</div>
+
+			<div class="row">
 				<div class="cell">Open in fullscreen</div>
 				<div class="cell">
 				    <div class="switch">
@@ -301,6 +313,7 @@
 
 				$('#showDevTools').prop('checked', config.init.showDevTools);
 				$('#useGPIO').prop('checked', config.init.useGPIO);
+				$('#useRemoteTrigger').prop('checked', config.init.useRemoteTrigger);
 				$('#fullscreen').prop('checked', config.init.fullscreen);
 			} else {
 				console.log('Server returned undefined config file');
@@ -323,6 +336,7 @@
 
 				config.init.showDevTools = $('#showDevTools').prop('checked');
 				config.init.useGPIO = $('#useGPIO').prop('checked');
+				config.init.useRemoteTrigger = $('#useRemoteTrigger').prop('checked');
 				config.init.fullscreen = $('#fullscreen').prop('checked');
 
 				socket.emit('set_config', {password: getCookie('password'), config: config});

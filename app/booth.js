@@ -96,6 +96,16 @@ if (utils.getConfig().init.useGPIO !== undefined ? utils.getConfig().init.useGPI
   });
 }
 
+if (utils.getConfig().init.useRemoteTrigger !== undefined ? utils.getConfig().init.useRemoteTrigger : true) {
+  const lirc = require('lirc-client')({
+    path: '/var/run/lirc/lircd'
+  });
+
+  lirc.on('receive', function (remote, button, repeat) {
+    trigger();
+});
+}
+
 const firstPhotoCountdownLength = utils.getConfig().firstPhotoCountdownLength ? Number(utils.getConfig().firstPhotoCountdownLength) : 5;
 const followingPhotosCountdownLength = utils.getConfig().followingPhotosCountdownLength ? Number(utils.getConfig().followingPhotosCountdownLength) : 3;
 const photoPreviewDuration = utils.getConfig().photoPreviewDuration ? Number(utils.getConfig().photoPreviewDuration) : 8;

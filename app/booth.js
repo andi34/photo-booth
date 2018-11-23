@@ -138,7 +138,7 @@ function trigger() {
       // wait a sec for spinner to start
       setTimeout(function() {
         prompt.start(true, false);
-      }, 1500);
+      }, 500);
     });
 
     // take picture after countdown
@@ -177,7 +177,7 @@ function trigger() {
               if(seriesCounter === photoSeriesLength-1) {
                 setTimeout(function () {
                   utils.prependImage(message1);     // add image to collage
-                }, 1500);
+                }, 500);
               }
 
               webApp.sendNewPhoto(message2);  // send image to connected web clients

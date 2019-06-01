@@ -115,10 +115,10 @@ It looks like this:
 		"height": "900",
 		"showDevTools": false,
 		"useGPIO": false,
-		"grayscaleMode": true,
+		"grayscaleMode": false,
 		"preventScreensaver": false
 	},
-	"maxImageSize": 1500,
+	"maxImageSize": 19200,
 	"countdownLength": 5,
 	"slideshow": {
 		"enabled": true,
@@ -132,7 +132,7 @@ It looks like this:
 	"content_dir": null,
 	"webapp": {
 		"password": "test",
-		"maxDownloadImageSize": 800,
+		"maxDownloadImageSize": 1920,
 		"enableRemoteRelease": true
 	},
 	"live": {
